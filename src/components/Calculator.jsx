@@ -7,6 +7,7 @@ export function Calculator() {
     const [num, setNum] = useState(0);
     const [oldnum, setOldNum] = useState(0);
     const [operator, setOperator] = useState();
+    const [isDark, setIsDark] = useState(false);
 
 
     function inputNum(e) {
@@ -53,14 +54,17 @@ export function Calculator() {
         setNum(0);
     }
 
+    function changeTheme() {
+        setIsDark(!isDark);
+    }
 
     return (
         <>
         <div>
-            <div className="container">
-                <div className="calculator dark">
-                    <div className="theme-toggler active">
-                        <i className="toggler-icon"></i>
+            <div className={`container ${isDark ? "dark" : ""}`}>
+                <div className={`calculator ${isDark ? "dark" : ""}`}>
+                    <div className={`theme-toggler ${isDark ? "active" : ""}`} onClick={changeTheme}>
+                        <i className="toggler-icon"></i> 
                     </div>
                     <div className="display-screen">
                         <div id="display">{num}</div>

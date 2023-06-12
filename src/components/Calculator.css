@@ -42,6 +42,10 @@ a{
     z-index: 1;
 }
 
+.toggler-icon {
+    cursor: pointer;
+}
+
 .theme-toggler.active{
     color: #333;
 }
@@ -129,5 +133,32 @@ button#equal {
     color: #eee5e5;
 }
 
+/* dark theme */
 
+.calculator.dark {
+    background-color: #0d050e;
+}
+
+.calculator.dark #display {
+    color: #f8fafd;
+}
+
+.calculator.dark button#clear {
+    background-color: #2b193e;
+    color: #f397da;
+}
+
+.calculator.dark button.btn-number {
+    background-color: #82405c;
+    color: #f8fafb;
+}
+
+.calculator.dark button.btn-operator {
+    background-color: #9e1539;
+    color: #f8fafb;
+}
+
+.calculator.dark button.btn-equal {
+    background-color: #ee3865;
+}
 
